@@ -1,4 +1,4 @@
-rsa
+pycryptodome
 requests
 colorama
 setuptools

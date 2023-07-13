@@ -1,4 +1,4 @@
-27027 MainProcess 2023-07-13 16:56:33,785
+31300 MainProcess 2023-07-13 17:14:55,016
 Traceback (most recent call last):
   File "/home/muhammad/.local/lib/python3.9/site-packages/pyarmor/cli/__main__.py", line 698, in main
     main_entry(sys.argv[1:])
@@ -20,7 +20,7 @@ Traceback (most recent call last):
     self.mtree = ast.parse(''.join(lines), self.frozenname, 'exec')
   File "/usr/lib/python3.9/ast.py", line 50, in parse
     return compile(source, filename, mode, flags,
-  File "<frozen git_ninja>", line 36
-    if (int) res == 1:
+  File "<frozen git_ninja>", line 103
+    if count = 3:
              ^
 SyntaxError: invalid syntax
