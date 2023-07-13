@@ -1,0 +1,6 @@
+rsa
+requests
+colorama
+setuptools
+pyinstaller
+pyarmor
