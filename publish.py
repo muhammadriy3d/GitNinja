@@ -4,7 +4,7 @@ program_dir = 'GitNinja/git_ninja.py'
 
 # Set the configuration options
 options = [
-    '--name=GitNinja',                                      # Name of the executable
+    '--name=Ninja',                                      # Name of the executable
     '--onefile',                                            # Create a single executable file
     '--windowed',                                           # Run the script without showing a console window
     '--icon=icon.ico',                                      # Optional: Path to the icon file for the executable

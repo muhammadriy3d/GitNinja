@@ -16,10 +16,11 @@ build: setup.py
 	python setup.py build bdist_wheel
 
 publish:
-	python publish
+	python publish.py
+
 clean:
 	if exist "./build" rd /s /q build
-	if exist "./dist" rd /s /q dist
+	if exist "./$(DIST_DIR)" rd /s /q $(DIST_DIR)
 	if exist "./$(PROGRAM_DIR).egg-info" rd /s /q $(PROGRAM_DIR).egg-info
 	if exist "./*.spec" remove *.spec
 	if exist "*.pyc __pycache__" rd /s /q *.pyc __pycache__
@@ -27,33 +28,41 @@ else
 run:
 	python3 $(PROGRAM_DIR)/$(PROGRAM_NAME).py
 
-install: requirements.txt
-	pip3 install -r requirements.txt
+install: $(REQIUREMENTS)
+	pip3 install -r $(REQIUREMENTS)
 
 build: setup.py
 	python3 setup.py build bdist_wheel
 
 publish:
-	pyinstaller --onefile $(PROGRAM_DIR)/$(PROGRAM_NAME).py
+	python3 publish.py
+	mkdir app
+	mv $(DIST_DIR)/Ninja $(APP_DIR)/
+	cp $(APP_DIR)/Ninja .
+	echo "Saved into app directory"
 	
 obfuscate:
 	pyarmor gen $(PROGRAM_DIR)/$(PROGRAM_NAME).py
-	mkdir app
 
 releaseObfuscate:
-	pyinstaller --onefile dist/$(PROGRAM_NAME).py
+	python3 publish.py
+	mkdir app
+	mv $(DIST_DIR)/Ninja $(APP_DIR)/
+	cp $(APP_DIR)/Ninja .
+	echo "Saved into app directory"
 
 runObfuscate:
-	python3 dist/$(PROGRAM_NAME).py
+	python3 $(DIST_DIR)/$(PROGRAM_NAME).py
 
 clean:
 	rm -rf build
-	rm -rf dist
+	rm -rf $(DIST_DIR)
 	rm -rf $(PROGRAM_DIR).egg-info
 	rm -rf *.spec
 	rm -rf *.pyc __pycache__
 
 cleanRelease:
 	rm -rf build
-	
+	rm -rf app
+	rm -rf Ninja
 endif
