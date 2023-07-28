@@ -1,4 +1,4 @@
-# Project Title
+# <span style="text-align: center;">GitNinja</span>
 
 Automation for git and github process with CRED, the program taking your token then it connect to github then you choose what to do Create, Read, Edit or Delete.
 
