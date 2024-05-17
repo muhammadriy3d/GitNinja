@@ -1,6 +1,6 @@
 import PyInstaller.__main__ as pyi
 
-program_dir = 'GitNinja/git_ninja.py'
+program_dir = 'package/GitNinja/git_ninja.py'
 
 # Set the configuration options
 options = [

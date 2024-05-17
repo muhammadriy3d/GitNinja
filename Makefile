@@ -1,4 +1,4 @@
-PROGRAM_DIR = GitNinja
+PROGRAM_DIR = package/GitNinja
 PROGRAM_NAME = git_ninja
 DIST_DIR = dist
 APP_DIR = app
