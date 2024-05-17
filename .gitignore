@@ -1,0 +1,7 @@
+dist/
+build/
+dist/
+GitNinja.egg-info/
+Ninja
+Ninja.spec
+Ninja.pkg
