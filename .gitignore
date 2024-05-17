@@ -1,7 +1,10 @@
 dist/
 build/
 dist/
+app/
 GitNinja.egg-info/
 Ninja
 Ninja.spec
 Ninja.pkg
+old_git_ninja.py
+.env.development
