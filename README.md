@@ -66,7 +66,6 @@ SOFTWARE.
 
 ## Contact
 
-Have any questions? Contact me at muhammad@truprox.com
+Have any questions? Contact me.
 
 Happy coding!
-
